@@ -7,11 +7,12 @@
 
 #### 1. Crowdsale.sol
 ##### function crowdsale(uint256 _rate,address _wallet,ERC20_token)
-   a>uint256 _rate is the wei value of each token.
-   b>address _wallet is the address at which all funds will be stored .
-   c>ERC20 _token is the address at which token contract is deployed.
   At first we need to transfer tokens to asset based crowdsale contracts deployed address.From there participants will buy tokens. 
-  Function crowdsale is the constructor of crowdsale contract which is used to set initial parameters like value of each token,address of owners wallet.
+  Function crowdsale is the constructor of crowdsale contract which is used to set initial parameters like value of each token,address     of owners wallet.
+  + uint256 _rate - is the wei value of each token.
+  + address _wallet - is the address at which all funds will be stored .
+  + ERC20 _token - is the address at which token contract is deployed.
+  
 
 ##### function buyTokens(address_beneficiary) public payable
    a>address _beneficiary is the address of participants who are participating in asset based crowdsale contact.
