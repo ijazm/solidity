@@ -1,7 +1,7 @@
 #### The crowd sale contracts have two main contract which are 
 1. Crowdsale.sol
-  + CappedCrowdSale.sol
-  + TimedCrowdSale.sol
+  + CappedCrowdSale.sol - Crowdsale with a limit for total contributions
+  + TimedCrowdSale.sol - Crowdsale accepting contributions only within a time frame
 2. ERC20.sol
 
 
