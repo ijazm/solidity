@@ -15,23 +15,30 @@
   
 
 ##### function buyTokens(address_beneficiary) public payable
-   a>address _beneficiary is the address of participants who are participating in asset based crowdsale contact.
   Function buyToken is used by participants to buy tokens.It is also used to update total wei amount raised .
+  + address _beneficiary - is the address of participants who are participating in asset based crowdsale contact.
+  
 
 ##### function _deliverTokens(address_beneficiary,uint256_tokenAmount)
-   a>address _beneficiary is the address of participants.
-   b>uint256 _tokenAmount is the total wei paid by participant to buy tokens.
   Function _deliveryTokens is used to emmit tokens from owners account to participants account.
+  + address _beneficiary - is the address of participants.
+  + uint256 _tokenAmount - is the total wei paid by participant to buy tokens.
+ 
 
 ##### function _processPurchase(address _beneficiary,uint256 _tokenAmount)
   This function is executed when a purchase has been validated and is ready to be executed. Not necessarily emits/sends tokens.
+  + address _beneficiary - is the address of participants.
+  + uint256 _tokenAmount - is the total wei paid by participant to buy tokens.
 
 ##### function _preValidatePurchase(address _beneficiary, uint256 _weiAmount) internal
   This function does validation of an incoming purchase. Uses require statements to revert state when conditions are not met
+  + address _beneficiary - is the address of participants.
+  + uint256 _tokenAmount - is the total wei paid by participant to buy tokens.
 
 ##### function _getTokenAmount(uint256 _weiAmount)
-  a>uint256 _weiAmount is value in wei to be converted into tokens.
   This function is used find number of tokens that can be purchased with the specified _weiAmount.
+  + uint256 _weiAmount - is value in wei to be converted into tokens.
+  
 
 ##### function _forwardFunds()
   This function is used to determines how ETH is stored/forwarded on purchases.
