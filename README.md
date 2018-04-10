@@ -1,7 +1,7 @@
 #### The crowd sale contracts have two main contract which are 
 1. Crowdsale.sol
-  <br/>1.1. CappedCrowdSale.sol - Crowdsale with a limit for total contributions
-  <br/>1.2.  TimedCrowdSale.sol - Crowdsale accepting contributions only within a time frame
+  <br/>1.1 CappedCrowdSale.sol - Crowdsale with a limit for total contributions
+  <br/>1.2 TimedCrowdSale.sol - Crowdsale accepting contributions only within a time frame
 2. ERC20.sol
 
 
@@ -42,5 +42,20 @@
 
 #### function _forwardFunds()
   This function is used to determines how ETH is stored/forwarded on purchases.
+  
+  
+### 1.1 CappedCrowdSale.sol
+#### contract CappedCrowdsale is Crowdsale:contract CapppedCrowdsale is inheriting all functions from Crowdsale contract.
+#### function CappedCrowdsale(uint256 _cap) public
+  This function is constructor which set smaximum amount of wei accepted in the crowdsale.
+    + uint256 _cap - is the maximum amount of wei to be contributed.
+  
+
+#### function capReached() public view returns (bool).
+  This function Checks whether the cap has been reached and returns the cap was reached.
+
+#### function _preValidatePurchase(address _beneficiary, uint256 _weiAmount) internal. 
+  + address_beneficiary - is token purchaser.
+  + uint256 _weiAmount - is the amount of wei contributed.
 
 
