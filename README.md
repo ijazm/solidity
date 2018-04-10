@@ -57,5 +57,23 @@
 #### function _preValidatePurchase(address _beneficiary, uint256 _weiAmount) internal. 
   + address_beneficiary - is token purchaser.
   + uint256 _weiAmount - is the amount of wei contributed.
+ 
+### 1.2 TimedCrowdSale.sol
+#### contract TimedCrowdsale is Crowdsale:contract TimedCrowdsale inherits functions from Crowdsale contract.
+#### modifier onlyWhileOpen:this modifier is used to set starting and ending time of crowdsale contract.
+
+#### function TimedCrowdsale(uint256 _openingTime, uint256 _closingTime) public
+  This constructor sets crowdsale opening and closing times.
+  + uint256 _openingTime - is Crowdsale opening time.
+  + uint256 _closingTime - is Crowdsale closing time.
+  
+
+#### function hasClosed() public view returns (bool) 
+  This function checks whether the crowdsale period has elapsed.
+
+#### function _preValidatePurchase(address _beneficiary, uint256 _weiAmount) internal onlyWhileOpen.
+  This function validates the purchase using criteria set by onlyWhileOpen modifier.
+  + address_beneficiary - is token purchaser.
+  + uint256 _weiAmount - is the amount of wei contributed.
 
 
